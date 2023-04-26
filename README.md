@@ -1,12 +1,12 @@
 # Zero to Production Rust Book by Luca Palmieri
 
-<!-- Current Commit @ 2.1 -->
+<!-- Current Commit @ < 3.7 -->
 
 This repository is following along the **'Zero2Prod'** rust book written by **Luca Palmieri**. You can find the book and information about the author [here](https://www.zero2prod.com/).
 
 This readme will likely end up being a collection of points/notes to highlight from the book or research that aren't strictly to do with 'writing the application code'... More around project structure, practice, tooling, things to remember, etc.
 
-## Optimisations on compilation for inner development loop
+## Optimisations on compilation and our inner development loop
 
 - Zero2Prod, 1.4.1
 - https://nnethercote.github.io/perf-book/compile-times.html
@@ -92,4 +92,16 @@ cargo install cargo-audit
 
 ```sh
 cargo audit
+```
+
+## Other tooling
+
+### Cargo Expand
+
+`cargo-expand` is a cargo subcommand that expands all macros and code generation without passing the output to the compiler, which allows us to inspect and debug the code that we use but otherwise would not see.
+
+```sh
+cargo install cargo-expand
+
+cargo expand
 ```
