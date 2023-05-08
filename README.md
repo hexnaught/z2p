@@ -1,6 +1,6 @@
 # Zero to Production Rust Book by Luca Palmieri
 
-<!-- Current Commit @ < 3.7 -->
+<!-- Current Commit @ < 3.8.5 -->
 
 This repository is following along the **'Zero2Prod'** rust book written by **Luca Palmieri**. You can find the book and information about the author [here](https://www.zero2prod.com/).
 
