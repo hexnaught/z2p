@@ -1,6 +1,6 @@
 # Zero to Production Rust Book by Luca Palmieri
 
-<!-- Current Commit @ < 4.0.0 -->
+<!-- Current Commit @ < 4.5.10 -->
 
 This repository is following along the **'Zero2Prod'** rust book written by **Luca Palmieri**. You can find the book and information about the author [here](https://www.zero2prod.com/).
 
@@ -104,4 +104,28 @@ cargo audit
 cargo install cargo-expand
 
 cargo expand
+```
+
+### Cargo unused dependency management (`cargo-udeps`)
+
+`cargo-udeps` scans the `Cargo.toml` file and checks if all of the crates listed under dependencies have actually been used in the project. `cargo-udeps` requires the nightly compiler, we can add `+nightly` to the invocation to tell cargo explicitly what toolchain we want to use.
+
+```sh
+cargo install cargo-udeps
+
+cargo +nightly udeps
+```
+
+# API endpoints and request examples
+
+## Health Check
+
+```sh
+curl http://127.0.0.1:8000/health_check -v
+```
+
+## Subscriptions
+
+```sh
+curl -X POST -d "name=hello%20world&email=helloworld%40example.com" http://127.0.0.1:8000/subscriptions
 ```
