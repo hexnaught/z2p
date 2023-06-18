@@ -1,10 +1,33 @@
 # Zero to Production Rust Book by Luca Palmieri
 
-<!-- Current Commit @ < 4.5.10 -->
+<!-- Current Commit @ < 4.5.x -->
+
+- [Zero to Production Rust Book by Luca Palmieri](#zero-to-production-rust-book-by-luca-palmieri)
+  - [Program Flags \& Env Vars](#program-flags--env-vars)
+  - [Optimisations on compilation and our inner development loop](#optimisations-on-compilation-and-our-inner-development-loop)
+    - [Faster linking](#faster-linking)
+    - [Using `cargo-watch`](#using-cargo-watch)
+    - [Using `cargo tarpaulin`](#using-cargo-tarpaulin)
+    - [Linting rust code](#linting-rust-code)
+    - [Formatting rust code](#formatting-rust-code)
+    - [Vulnerability scanning of dependencies](#vulnerability-scanning-of-dependencies)
+  - [Other tooling](#other-tooling)
+    - [Cargo Expand](#cargo-expand)
+    - [Cargo unused dependency management (`cargo-udeps`)](#cargo-unused-dependency-management-cargo-udeps)
+- [API endpoints and request examples](#api-endpoints-and-request-examples)
+  - [Health Check](#health-check)
+  - [Subscriptions](#subscriptions)
 
 This repository is following along the **'Zero2Prod'** rust book written by **Luca Palmieri**. You can find the book and information about the author [here](https://www.zero2prod.com/).
 
 This readme will likely end up being a collection of points/notes to highlight from the book or research that aren't strictly to do with 'writing the application code'... More around project structure, practice, tooling, things to remember, etc.
+
+## Program Flags & Env Vars
+
+| Context | Key        | Example                                                | Result                                                                   |
+| ------- | ---------- | ------------------------------------------------------ | ------------------------------------------------------------------------ |
+| Tests   | `TEST_LOG` | `TEST_LOG=true cargo test health_check_works | bunyan` | The tests will give trace/span output and pipe to bunyan for readability |
+
 
 ## Optimisations on compilation and our inner development loop
 
